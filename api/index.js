@@ -22,6 +22,9 @@ app.use(cookieParser());
 app.use(helmet());
 
 //ROUTES
+app.get("/", (req, res) => {
+  res.json({ status: "server is running" });
+});
 app.use("/v0/auth", authRoute);
 app.use("/v0/user", userRoute);
 app.use("/v0/file", fileRoute);
