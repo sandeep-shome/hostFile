@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.teko {
+  font-family: "Teko", sans-serif;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  @apply h-12 px-4 rounded bg-blue-500 capitalize flex items-center justify-center text-white  transition hover:bg-blue-400;
+}
+.btn-secondary {
+  @apply py-2 px-4 rounded bg-blue-500 capitalize flex items-center justify-center text-white  transition hover:bg-blue-400;
+}
+.btn-form {
+  @apply py-3 w-11/12 rounded bg-blue-500 capitalize flex items-center justify-center text-white  transition hover:bg-blue-400;
+}
+.background-gradient-light {
+  background-image: linear-gradient(45deg, #cbd9f8 0%, #e4efe9 100%);
+}
+
+.container {
+  @apply px-4 w-full sm:px-6 md:px-10 lg:px-16 xl:px-24 2xl:px-40;
+}
+.max-h-750 {
+  max-height: 750;
+}
+
+::-webkit-progress-bar {
+  background-color: rgb(241 245 249);
+}
+::-webkit-progress-value {
+  background-color: rgb(59 130 246);
+}
+
+nav {
+  &.active {
+    background: rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgb(232, 232, 232);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+
+    &.dark {
+      background: rgba(7, 7, 25, 0.25);
+      /* box-shadow: 0 1px 5px 0 rgba(31, 38, 135, 0.37); */
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-bottom: #cbd5e11a;
+    }
+  }
+}
